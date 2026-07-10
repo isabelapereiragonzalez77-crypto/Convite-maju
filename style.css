@@ -1,21 +1,95 @@
-.convite-container { 
-    /* Esta classe controla a moldura */
-    width: 95%; 
-    max-width: 500px;
-    background-image: url('moldura.png'); 
-    background-size: 100% 100%; /* Garante que a moldura preencha o container */
-    background-repeat: no-repeat;
-    
-    /* O padding é vital: ele empurra o texto para dentro da moldura */
-    padding: 15% 10%; 
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho da caixa */
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* style.css */
+
+/* Importação das fontes profissionais */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@200;300;400&display=swap');
+
+:root {
+    --fundo: #fdfaf7;
+    --dourado: #c5a975;
+    --texto: #4a443d;
 }
 
-.conteudo {
-    width: 100%;
+body { 
+    background-color: var(--fundo); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.convite-container { 
+    width: 90%; 
+    max-width: 500px;
+    /* Aplica a moldura ornamentada */
+    background-image: url('moldura.png'); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* Padding para manter o texto dentro da área da moldura */
+    padding: 25% 15%; 
+    box-sizing: border-box;
     text-align: center;
+    color: var(--texto);
+}
+
+h1 { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 3.5rem; 
+    color: var(--texto); 
+    margin: 0 0 10px 0; 
+    font-weight: 300; 
+}
+
+.sub { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-style: italic; 
+    font-size: 1.6rem; 
+    color: var(--dourado); 
+    margin-bottom: 30px; 
+}
+
+.detalhes { 
+    border-top: 1px solid #d4c5b0; 
+    border-bottom: 1px solid #d4c5b0; 
+    padding: 25px 0; 
+    margin-bottom: 30px; 
+    line-height: 2; 
+    font-size: 0.95rem; 
+}
+
+.btn-group { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.btn { 
+    display: block; 
+    padding: 16px; 
+    border: 1px solid var(--texto); 
+    color: var(--texto); 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    letter-spacing: 0.2em; 
+    font-size: 0.75rem; 
+    transition: all 0.4s ease; 
+    background: transparent;
+}
+
+.btn:hover { 
+    background: var(--texto); 
+    color: #ffffff; 
+    cursor: pointer; 
+}
+
+.btn-principal { 
+    background: var(--dourado); 
+    border-color: var(--dourado); 
+    color: #ffffff; 
+}
+
+.btn-principal:hover { 
+    background: #a88d60; 
+    border-color: #a88d60; 
 }
