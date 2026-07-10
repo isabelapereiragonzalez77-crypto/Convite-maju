@@ -7,85 +7,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cor-fundo: #fbf9f6;
-            --cor-dourado: #c5a975;
-            --cor-texto: #4a443d;
-            --cor-branco: #ffffff;
+            --bg: #fdfaf7;
+            --dourado: #c5a975;
+            --dourado-escuro: #8c734b;
+            --text: #4a443d;
         }
 
-        /* Animação suave de entrada */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        body { 
+            background-color: var(--bg); margin: 0; padding: 40px 20px; 
+            font-family: 'Montserrat', sans-serif; color: var(--text); 
+            display: flex; justify-content: center; align-items: center; min-height: 100vh;
+            animation: fadeIn 1.2s ease-out;
         }
 
-        body {
-            background-color: var(--cor-fundo);
-            margin: 0;
-            padding: 40px 20px;
-            font-family: 'Montserrat', sans-serif;
-            color: var(--cor-texto);
-            display: flex;
-            justify-content: center;
-            animation: fadeIn 1.2s ease-out; /* Aplicando a animação */
+        .card { 
+            background: #ffffff; width: 100%; max-width: 480px; padding: 60px 40px; 
+            text-align: center; border: 1px solid var(--dourado); 
+            box-shadow: 0 15px 45px rgba(0,0,0,0.15); position: relative;
         }
 
-        .card {
-            background: var(--cor-branco);
-            width: 100%;
-            max-width: 450px;
-            padding: 50px 30px;
-            text-align: center;
-            border: 1px solid #e5e0d8;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            position: relative;
+        /* Ornamentos dourados de luxo */
+        .card::before, .card::after {
+            content: "❦"; position: absolute; color: var(--dourado); font-size: 2rem;
         }
+        .card::before { top: 10px; left: 10px; }
+        .card::after { bottom: 10px; right: 10px; }
 
-        .card::after {
-            content: "";
-            position: absolute;
-            top: 15px; left: 15px; right: 15px; bottom: 15px;
-            border: 1px solid var(--cor-dourado);
-            pointer-events: none;
-        }
-
-        .header { text-transform: uppercase; letter-spacing: 0.4em; font-size: 0.75rem; color: var(--cor-dourado); margin-bottom: 25px; }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; margin: 0; color: var(--cor-texto); font-weight: 300; }
-        .sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.6rem; color: var(--cor-dourado); margin-bottom: 30px; }
-        .detalhes { border-top: 1px solid #efeae4; border-bottom: 1px solid #efeae4; padding: 25px 0; margin-bottom: 30px; line-height: 2; font-size: 0.95rem; }
-        .btn-group { display: flex; flex-direction: column; gap: 12px; }
+        .top-label { text-transform: uppercase; letter-spacing: 0.5em; font-size: 0.7rem; color: var(--dourado); margin-bottom: 20px; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; margin: 0; color: var(--text); font-weight: 300; }
+        .sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.8rem; color: var(--dourado); margin-bottom: 35px; }
         
-        .btn {
-            padding: 16px 20px;
-            border: 1px solid var(--cor-texto);
-            color: var(--cor-texto);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-size: 0.75rem;
-            transition: all 0.4s ease;
-        }
+        .detalhes { border-top: 1px solid #f0eadd; border-bottom: 1px solid #f0eadd; padding: 25px 0; margin-bottom: 30px; line-height: 2.2; font-size: 0.95rem; }
         
-        .btn:hover { background: var(--cor-texto); color: var(--cor-branco); cursor: pointer; }
-        .btn-gold { border-color: var(--cor-dourado); color: var(--cor-dourado); }
-        .btn-gold:hover { background: var(--cor-dourado); color: var(--cor-branco); }
+        .prazo { color: var(--dourado-escuro); font-weight: 600; margin-bottom: 20px; font-size: 0.9rem; border: 1px solid var(--dourado); padding: 10px; }
+
+        .btn-group { display: flex; flex-direction: column; gap: 15px; }
+        .btn { 
+            padding: 18px 25px; border: 1px solid var(--text); color: var(--text);
+            text-decoration: none; text-transform: uppercase; letter-spacing: 0.2em;
+            font-size: 0.75rem; transition: all 0.4s ease;
+        }
+        .btn:hover { background: var(--text); color: #fff; cursor: pointer; }
+        .btn-gold { border-color: var(--dourado); color: var(--dourado-escuro); }
+        .btn-gold:hover { background: var(--dourado); color: white; }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="header">Convite Especial</div>
+        <div class="top-label">Convite Especial</div>
         <h1>Maju</h1>
         <div class="sub">15 Anos</div>
 
         <div class="detalhes">
             <div><strong>04 de Outubro</strong> às <strong>12:00</strong></div>
             <div>Estr. do Rio Grande, 2813 - Taquara</div>
-            <div style="margin-top: 5px;"><em>Traje: Banho com short</em></div>
+            <div style="margin-top: 10px;"><em>Traje: Banho com short</em></div>
+        </div>
+
+        <div class="prazo">
+            Favor confirmar presença até o dia 24 de setembro.
         </div>
 
         <div class="btn-group">
-            <!-- Lembre-se de substituir o link abaixo -->
-            <a href="lista1.png" target="_blank" class="btn btn-gold">Ver Lista de Presentes</a>
+            <a href="COLE_O_LINK_DA_SUA_IMAGEM_lista.png_AQUI" target="_blank" class="btn btn-gold">Ver Lista de Presentes</a>
             <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário de 15 anos da Maju." class="btn">Confirmar Presença</a>
         </div>
     </div>
