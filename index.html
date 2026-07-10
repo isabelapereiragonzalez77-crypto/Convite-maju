@@ -2,29 +2,39 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite Maju 15</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Arial', sans-serif; text-align: center; background-color: #fcf8f2; color: #8c734b; padding: 20px; }
-        .container { max-width: 400px; margin: auto; border: 2px solid #d4af37; padding: 20px; background: white; }
-        h1 { font-size: 3em; margin: 0; }
-        .info { margin: 20px 0; }
-        .btn { display: block; background-color: #d4af37; color: white; padding: 15px; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; }
-        .btn:hover { background-color: #b8860b; }
+        body { 
+            background-color: #fdfaf6; 
+            display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;
+            font-family: 'Montserrat', sans-serif; color: #7a6b57;
+        }
+        .convite { 
+            background: #ffffff; padding: 40px; text-align: center; 
+            border: 1px solid #e0d5c1; max-width: 320px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.5em; margin-bottom: 5px; color: #6b5a45; }
+        .sub { font-size: 0.9em; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; }
+        .detalhes { margin: 25px 0; font-size: 0.95em; line-height: 1.8; }
+        .btn { 
+            display: inline-block; background-color: #8c734b; color: #fff; 
+            padding: 12px 25px; text-decoration: none; border-radius: 50px; 
+            font-size: 0.9em; transition: 0.3s; margin-top: 15px;
+        }
+        .btn:hover { background-color: #6b5a45; }
+        a { color: #8c734b; text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <p>CONVITE ESPECIAL</p>
+    <div class="convite">
+        <div class="sub">Convite Especial</div>
         <h1>Maju 15</h1>
-        <p>TRAJE DE BANHO com short</p>
-        <div class="info">
-            <p><strong>DIA:</strong> 04/10</p>
-            <p><strong>HORÁRIO:</strong> 12:00</p>
-            <p><strong>LOCAL:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Estr.+do+Rio+Grande,+2813+Taquara+Rio+de+Janeiro+RJ" target="_blank">Clique aqui para abrir o mapa</a></p>
+        <p>Traje de banho com short</p>
+        <div class="detalhes">
+            04 de Outubro | 12:00<br>
+            <a href="https://www.google.com/maps/search/?api=1&query=Estr.+do+Rio+Grande,+2813+Taquara+Rio+de+Janeiro+RJ" target="_blank">Ver localização</a>
         </div>
-        <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário da Maju." class="btn">Confirmar presença até 24/09</a>
+        <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário da Maju." class="btn">Confirmar presença</a>
     </div>
 </body>
 </html>
-
