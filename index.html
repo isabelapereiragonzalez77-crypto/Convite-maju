@@ -3,141 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite Maju 15</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Convite | Maju 15 Anos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cor-fundo: #fdfaf7;
-            --cor-moldura: #c5a975;
-            --cor-texto: #5a4f41;
-            --cor-botao: #7a6b57;
+            --bg: #fbf9f6;
+            --accent: #b89665;
+            --text: #4a443d;
+            --white: #ffffff;
         }
-
         body {
+            background-color: var(--bg);
             margin: 0;
-            padding: 0;
-            background-color: var(--cor-fundo);
+            padding: 40px 20px;
             font-family: 'Montserrat', sans-serif;
-            color: var(--cor-texto);
+            color: var(--text);
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
-
-        .convite-container {
-            width: 90%;
-            max-width: 450px;
-            padding: 40px;
-            background: #ffffff;
-            border: 1px solid #e8e1d5;
-            position: relative;
+        .card {
+            background: var(--white);
+            width: 100%;
+            max-width: 500px;
+            padding: 60px 40px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e5e0d8;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            position: relative;
         }
-
-        /* Moldura decorativa */
-        .convite-container::before {
+        /* Detalhe sofisticado de borda interna */
+        .card::after {
             content: "";
             position: absolute;
             top: 15px; left: 15px; right: 15px; bottom: 15px;
-            border: 1px solid var(--cor-moldura);
+            border: 1px solid #d4c5b0;
             pointer-events: none;
         }
-
-        .header {
+        .top-label {
             text-transform: uppercase;
-            letter-spacing: 0.3em;
-            font-size: 0.75rem;
-            margin-bottom: 20px;
-            color: var(--cor-moldura);
+            letter-spacing: 0.4em;
+            font-size: 0.7rem;
+            color: var(--accent);
+            margin-bottom: 25px;
         }
-
         h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
-            margin: 10px 0;
-            font-weight: 300;
-            color: var(--cor-botao);
-        }
-
-        .idade {
-            font-size: 1.5rem;
-            font-style: italic;
-            margin-bottom: 30px;
-            color: var(--cor-moldura);
-        }
-
-        .divisor {
-            width: 50px;
-            height: 1px;
-            background: var(--cor-moldura);
-            margin: 20px auto;
-        }
-
-        .info {
-            font-size: 0.95rem;
-            line-height: 2;
-            margin-bottom: 30px;
-        }
-
-        .traje {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            margin: 0;
+            color: var(--text);
             font-weight: 400;
-            margin-top: 10px;
         }
-
-        .btn-container {
-            margin-top: 20px;
+        .age {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 40px;
         }
-
+        .details-wrapper {
+            border-top: 1px solid #efeae4;
+            border-bottom: 1px solid #efeae4;
+            padding: 30px 0;
+            margin-bottom: 40px;
+        }
+        .detail-item {
+            margin: 15px 0;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+        .gifts-section {
+            margin-bottom: 40px;
+        }
+        .gifts-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        .gifts-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.85rem;
+            color: #777;
+        }
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background-color: transparent;
-            border: 1px solid var(--cor-botao);
-            color: var(--cor-botao);
+            padding: 18px 40px;
+            border: 1px solid var(--text);
+            color: var(--text);
             text-decoration: none;
-            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            transition: all 0.3s ease;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            transition: all 0.4s ease;
         }
-
         .btn:hover {
-            background-color: var(--cor-botao);
-            color: #ffffff;
-        }
-
-        .link-local {
-            color: var(--cor-moldura);
-            text-decoration: none;
-            border-bottom: 1px solid var(--cor-moldura);
+            background: var(--text);
+            color: var(--white);
         }
     </style>
 </head>
 <body>
-
-    <div class="convite-container">
-        <div class="header">Convite Especial</div>
+    <div class="card">
+        <div class="top-label">Convite Especial</div>
         <h1>Maju</h1>
-        <div class="idade">15 anos</div>
-        
-        <div class="divisor"></div>
+        <div class="age">15 Anos</div>
 
-        <div class="info">
-            <div>04 de Outubro | 12:00</div>
-            <div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Estr.+do+Rio+Grande,+2813+Taquara+Rio+de+Janeiro+RJ" class="link-local">
-                    Estr. do Rio Grande, 2813 - Taquara
-                </a>
-            </div>
-            <div class="traje">Traje de banho com short</div>
+        <div class="details-wrapper">
+            <div class="detail-item"><strong>04 de Outubro</strong> às <strong>12:00</strong></div>
+            <div class="detail-item">Estr. do Rio Grande, 2813 - Taquara</div>
+            <div class="detail-item" style="margin-top: 15px;"><em>Traje: Banho com short</em></div>
         </div>
 
-        <div class="btn-container">
-            <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário de 15 anos da Maju." class="btn">Confirmar Presença</a>
+        <div class="gifts-section">
+            <div class="gifts-title">Sugestão de Presente</div>
+            <ul class="gifts-list">
+                <li>Pix: [Sua Chave Pix Aqui]</li>
+                <li>Sua presença é o nosso maior presente</li>
+            </ul>
         </div>
+
+        <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário da Maju." class="btn">Confirmar Presença</a>
     </div>
-
 </body>
 </html>
