@@ -1,12 +1,28 @@
-body { background: #fdfaf7; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-.convite-container { 
-    background: white; padding: 50px; border: 2px solid #c5a975; 
-    box-shadow: 0 0 20px rgba(197, 169, 117, 0.3); 
-    text-align: center; transition: transform 0.5s;
+body { 
+    background: url('https://www.transparenttextures.com/patterns/creampaper.png'); /* Textura de papel elegante */
+    background-color: #fcf8f2; 
+    display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; 
 }
+
+.convite-container { 
+    background: white; 
+    padding: 60px; 
+    border: 1px solid #d4c5b0; 
+    /* Borda dupla decorativa */
+    outline: 5px double #c5a975; 
+    outline-offset: -15px; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #4a443d; margin: 0; }
+.ornamento { color: #c5a975; font-size: 2rem; }
+
 .btn { 
-    display: block; margin: 10px 0; padding: 15px; border: 1px solid #c5a975; 
-    color: #8c734b; text-decoration: none; font-weight: bold;
+    display: block; margin: 15px auto; padding: 15px 30px; 
+    border: 1px solid #c5a975; background: #fff;
+    color: #8c734b; text-transform: uppercase; letter-spacing: 0.2em;
+    transition: all 0.4s;
 }
 .btn:hover { background: #c5a975; color: white; }
-
