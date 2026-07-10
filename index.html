@@ -2,39 +2,142 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Maju 15</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     <style>
-        body { 
-            background-color: #fdfaf6; 
-            display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;
-            font-family: 'Montserrat', sans-serif; color: #7a6b57;
+        :root {
+            --cor-fundo: #fdfaf7;
+            --cor-moldura: #c5a975;
+            --cor-texto: #5a4f41;
+            --cor-botao: #7a6b57;
         }
-        .convite { 
-            background: #ffffff; padding: 40px; text-align: center; 
-            border: 1px solid #e0d5c1; max-width: 320px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--cor-texto);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.5em; margin-bottom: 5px; color: #6b5a45; }
-        .sub { font-size: 0.9em; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; }
-        .detalhes { margin: 25px 0; font-size: 0.95em; line-height: 1.8; }
-        .btn { 
-            display: inline-block; background-color: #8c734b; color: #fff; 
-            padding: 12px 25px; text-decoration: none; border-radius: 50px; 
-            font-size: 0.9em; transition: 0.3s; margin-top: 15px;
+
+        .convite-container {
+            width: 90%;
+            max-width: 450px;
+            padding: 40px;
+            background: #ffffff;
+            border: 1px solid #e8e1d5;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
-        .btn:hover { background-color: #6b5a45; }
-        a { color: #8c734b; text-decoration: underline; }
+
+        /* Moldura decorativa */
+        .convite-container::before {
+            content: "";
+            position: absolute;
+            top: 15px; left: 15px; right: 15px; bottom: 15px;
+            border: 1px solid var(--cor-moldura);
+            pointer-events: none;
+        }
+
+        .header {
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.75rem;
+            margin-bottom: 20px;
+            color: var(--cor-moldura);
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            margin: 10px 0;
+            font-weight: 300;
+            color: var(--cor-botao);
+        }
+
+        .idade {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: var(--cor-moldura);
+        }
+
+        .divisor {
+            width: 50px;
+            height: 1px;
+            background: var(--cor-moldura);
+            margin: 20px auto;
+        }
+
+        .info {
+            font-size: 0.95rem;
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+
+        .traje {
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            border: 1px solid var(--cor-botao);
+            color: var(--cor-botao);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--cor-botao);
+            color: #ffffff;
+        }
+
+        .link-local {
+            color: var(--cor-moldura);
+            text-decoration: none;
+            border-bottom: 1px solid var(--cor-moldura);
+        }
     </style>
 </head>
 <body>
-    <div class="convite">
-        <div class="sub">Convite Especial</div>
-        <h1>Maju 15</h1>
-        <p>Traje de banho com short</p>
-        <div class="detalhes">
-            04 de Outubro | 12:00<br>
-            <a href="https://www.google.com/maps/search/?api=1&query=Estr.+do+Rio+Grande,+2813+Taquara+Rio+de+Janeiro+RJ" target="_blank">Ver localização</a>
+
+    <div class="convite-container">
+        <div class="header">Convite Especial</div>
+        <h1>Maju</h1>
+        <div class="idade">15 anos</div>
+        
+        <div class="divisor"></div>
+
+        <div class="info">
+            <div>04 de Outubro | 12:00</div>
+            <div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Estr.+do+Rio+Grande,+2813+Taquara+Rio+de+Janeiro+RJ" class="link-local">
+                    Estr. do Rio Grande, 2813 - Taquara
+                </a>
+            </div>
+            <div class="traje">Traje de banho com short</div>
         </div>
-        <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário da Maju." class="btn">Confirmar presença</a>
+
+        <div class="btn-container">
+            <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário de 15 anos da Maju." class="btn">Confirmar Presença</a>
+        </div>
     </div>
+
 </body>
 </html>
