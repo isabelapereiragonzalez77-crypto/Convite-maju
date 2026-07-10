@@ -1,0 +1,12 @@
+body { background: #fdfaf7; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+.convite-container { 
+    background: white; padding: 50px; border: 2px solid #c5a975; 
+    box-shadow: 0 0 20px rgba(197, 169, 117, 0.3); 
+    text-align: center; transition: transform 0.5s;
+}
+.btn { 
+    display: block; margin: 10px 0; padding: 15px; border: 1px solid #c5a975; 
+    color: #8c734b; text-decoration: none; font-weight: bold;
+}
+.btn:hover { background: #c5a975; color: white; }
+
