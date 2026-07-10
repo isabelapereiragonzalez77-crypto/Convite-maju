@@ -4,126 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convite | Maju 15 Anos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #fbf9f6;
-            --accent: #b89665;
-            --text: #4a443d;
-            --white: #ffffff;
+            --cor-fundo: #fbf9f6;
+            --cor-dourado: #c5a975;
+            --cor-texto: #4a443d;
+            --cor-branco: #ffffff;
         }
+
+        /* Animação suave de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         body {
-            background-color: var(--bg);
+            background-color: var(--cor-fundo);
             margin: 0;
             padding: 40px 20px;
             font-family: 'Montserrat', sans-serif;
-            color: var(--text);
+            color: var(--cor-texto);
             display: flex;
             justify-content: center;
+            animation: fadeIn 1.2s ease-out; /* Aplicando a animação */
         }
+
         .card {
-            background: var(--white);
+            background: var(--cor-branco);
             width: 100%;
-            max-width: 500px;
-            padding: 60px 40px;
+            max-width: 450px;
+            padding: 50px 30px;
             text-align: center;
             border: 1px solid #e5e0d8;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
             position: relative;
         }
-        /* Detalhe sofisticado de borda interna */
+
         .card::after {
             content: "";
             position: absolute;
             top: 15px; left: 15px; right: 15px; bottom: 15px;
-            border: 1px solid #d4c5b0;
+            border: 1px solid var(--cor-dourado);
             pointer-events: none;
         }
-        .top-label {
-            text-transform: uppercase;
-            letter-spacing: 0.4em;
-            font-size: 0.7rem;
-            color: var(--accent);
-            margin-bottom: 25px;
-        }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.8rem;
-            margin: 0;
-            color: var(--text);
-            font-weight: 400;
-        }
-        .age {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.8rem;
-            color: var(--accent);
-            margin-bottom: 40px;
-        }
-        .details-wrapper {
-            border-top: 1px solid #efeae4;
-            border-bottom: 1px solid #efeae4;
-            padding: 30px 0;
-            margin-bottom: 40px;
-        }
-        .detail-item {
-            margin: 15px 0;
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
-        }
-        .gifts-section {
-            margin-bottom: 40px;
-        }
-        .gifts-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: var(--accent);
-        }
-        .gifts-list {
-            list-style: none;
-            padding: 0;
-            font-size: 0.85rem;
-            color: #777;
-        }
+
+        .header { text-transform: uppercase; letter-spacing: 0.4em; font-size: 0.75rem; color: var(--cor-dourado); margin-bottom: 25px; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; margin: 0; color: var(--cor-texto); font-weight: 300; }
+        .sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.6rem; color: var(--cor-dourado); margin-bottom: 30px; }
+        .detalhes { border-top: 1px solid #efeae4; border-bottom: 1px solid #efeae4; padding: 25px 0; margin-bottom: 30px; line-height: 2; font-size: 0.95rem; }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; }
+        
         .btn {
-            display: inline-block;
-            padding: 18px 40px;
-            border: 1px solid var(--text);
-            color: var(--text);
+            padding: 16px 20px;
+            border: 1px solid var(--cor-texto);
+            color: var(--cor-texto);
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.15em;
             font-size: 0.75rem;
             transition: all 0.4s ease;
         }
-        .btn:hover {
-            background: var(--text);
-            color: var(--white);
-        }
+        
+        .btn:hover { background: var(--cor-texto); color: var(--cor-branco); cursor: pointer; }
+        .btn-gold { border-color: var(--cor-dourado); color: var(--cor-dourado); }
+        .btn-gold:hover { background: var(--cor-dourado); color: var(--cor-branco); }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="top-label">Convite Especial</div>
+        <div class="header">Convite Especial</div>
         <h1>Maju</h1>
-        <div class="age">15 Anos</div>
+        <div class="sub">15 Anos</div>
 
-        <div class="details-wrapper">
-            <div class="detail-item"><strong>04 de Outubro</strong> às <strong>12:00</strong></div>
-            <div class="detail-item">Estr. do Rio Grande, 2813 - Taquara</div>
-            <div class="detail-item" style="margin-top: 15px;"><em>Traje: Banho com short</em></div>
+        <div class="detalhes">
+            <div><strong>04 de Outubro</strong> às <strong>12:00</strong></div>
+            <div>Estr. do Rio Grande, 2813 - Taquara</div>
+            <div style="margin-top: 5px;"><em>Traje: Banho com short</em></div>
         </div>
 
-        <div class="gifts-section">
-            <div class="gifts-title">Sugestão de Presente</div>
-            <ul class="gifts-list">
-                <li>Pix: [Sua Chave Pix Aqui]</li>
-                <li>Sua presença é o nosso maior presente</li>
-            </ul>
+        <div class="btn-group">
+            <!-- Lembre-se de substituir o link abaixo -->
+            <a href="COLE_O_LINK_DA_SUA_IMAGEM_lista.png_AQUI" target="_blank" class="btn btn-gold">Ver Lista de Presentes</a>
+            <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário de 15 anos da Maju." class="btn">Confirmar Presença</a>
         </div>
-
-        <a href="https://wa.me/552196891017?text=Olá! Confirmo minha presença no aniversário da Maju." class="btn">Confirmar Presença</a>
     </div>
 </body>
 </html>
